@@ -25,8 +25,9 @@ class Command(BaseCommand):
                 raise CommandError('Owner [%s] does not exist' % house_owner )
         if houses:
             for house in houses:
+                n = house.id
                 address = house.address
                 owner = house.owner
-                self.stdout.write('address=[%s] owner=[%s]\n' % (address, owner) )
+                self.stdout.write('id=[%s] address=[%s] owner=[%s]\n' % (n, address, owner) )
         else:
             raise CommandError('No houses to display')

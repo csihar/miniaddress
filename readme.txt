@@ -13,3 +13,4 @@ Extra credit completed:
 ---- Thu 8/29/2013:
 1.   Implement a delete_house command.
 2.   For the delete_house command, when deleting a house, also delete the owner if they own no other houses.
+10.  Add id=[n] to the output for each record, where id is the primary key for the record.
