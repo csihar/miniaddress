@@ -4,7 +4,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = patterns('',
-#    url(r'^$', 'miniaddress.views.home', name='home'),
+    url(r'^$', 'miniaddress.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
 )
 

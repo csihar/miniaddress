@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>miniaddress</title>
+    <style type="text/css">
+
+body {
+    background:#EEE;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 20pt;
+    color:#333;
+    min-width:700px;
+    }
+    
+h1 {
+    font-size:32pt;
+    color:#222;
+    text-align:center;
+    width:100%;
+    text-shadow:3px 2px 1px white;
+    }
+
+h2 {
+    font-family:"Georgia", serif;
+    font-size:16pt;
+    width:100%;
+    color:#666;
+    text-align:center;
+    }
+
+ul {
+    margin:40px auto;
+    list-style: none;
+    padding:0;
+    }
+
+#houses {
+    width:67%;
+    min-width:700px;
+    }
+    
+#owners {
+    margin-top:60px;
+    font-size:.75em;
+    width:33%;
+    min-width:350px;
+    }
+
+li {
+    background:#FFF;
+    margin-top:5px;
+    border:0;
+    }
+    
+#houses li {
+    line-height:50px;
+    height:50px;
+    border-radius:30px;
+    text-align:right;
+    padding:0 0 0 20px;
+    }
+
+#owners li {
+    text-align:center;
+    line-height:30px;
+    height:30px;
+    border-radius:30px;
+    padding:0 10px;
+    }
+    
+.id {
+    float:left;
+    color:#BBB;
+    }
+    
+#houses li .id {
+    }
+    
+.address {
+    text-align:left;
+    height:50px;
+    width:60%;
+    background:#DDD;
+    padding: 0 20px;
+    margin-left:10px;
+    border-radius:30px;
+    display:inline-block;
+    }
+
+   
+    </style>
+</head>
+<body>
+
+<h1>miniaddress</h1>
+
+<ul id="houses">
+<h2>Houses</h2>
+{% for house in houses %}
+    <li>
+        <div class="id">{{house.id}}</div>
+        {{house.owner}}
+        <span class="address">{{house.address}}</span>
+    </li>
+{% endfor %}
+</ul>
+
+<ul id="owners">
+<h2>Owners</h2>
+{% for owner in owners %}
+    <li>
+        <div class="id">{{owner.id}}</div>
+        {{owner.name}}
+    </li>
+{% endfor %}
+</ul>
+
+
+</body>
+</html>
