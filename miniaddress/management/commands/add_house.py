@@ -31,7 +31,7 @@ class Command(BaseCommand):
             if not owner_exists:
                 new_owner = Owner(name=owner)
                 new_owner.save()
-                self.stdout.write('Added owner: name=[%s]' % owner)
+                self.stdout.write('Added owner: name=[%s]\n' % owner)
         else:
             raise CommandError('Please specify an owner')
             
