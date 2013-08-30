@@ -45,7 +45,7 @@ class Command(BaseCommand):
                 owner_inst = Owner.objects.get(name=owner)
                 new_house = House(address=address, owner=owner_inst)
                 new_house.save()
-                self.stdout.write('Added house: address=[%s] owner=[%s]' % (address, owner) )
+                self.stdout.write('Added house: id=[%s] address=[%s] owner=[%s]' % (new_house.id, address, owner) )
         else:
             raise CommandError('Please specify an address')
 

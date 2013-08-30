@@ -21,10 +21,11 @@ class Command(BaseCommand):
             if not del_house:
                 self.stdout.write('No houses containing [%s]' % address )
             for house in del_house:
+                house_id = house.id
                 address = house.address
                 owner = house.owner
                 house.delete()
-                self.stdout.write('Deleted house: address=[%s] owner=[%s]\n' % (address, owner) )
+                self.stdout.write('Deleted house: id=[%s] address=[%s] owner=[%s]\n' % (house_id, address, owner) )
                 owner_has_house = House.objects.filter(owner__name=owner)
                 if not owner_has_house:
                     del_owner = Owner.objects.get(name=owner)
