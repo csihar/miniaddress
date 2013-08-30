@@ -22,7 +22,8 @@ class Command(BaseCommand):
         
     def handle(self, *args, **options):
         ''' Show all houses.
-            Limit to a specific owner with --owner=foo '''
+            Limit to a specific owner with --owner=foo
+            Find address containing string "bar" with --addr-contains=bar '''
         houses = House.objects.all()
 
         if options['house_owner']:
