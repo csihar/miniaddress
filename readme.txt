@@ -1,5 +1,5 @@
 miniaddress: a simple command-line address manager.
-
+(Note: this was an exercise to get some practice with management commands and doesn't do anything especially interesting)
 
 Extra credit completed:
 
